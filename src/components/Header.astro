@@ -26,6 +26,7 @@ import { SITE_TITLE } from '../consts';
       link.classList.add("underline");
     }
   });
+  console.log(currentPath);
 </script>
 <header>
 <nav class="bg-white shadow-lg">
@@ -46,8 +47,8 @@ import { SITE_TITLE } from '../consts';
         <!-- Primary Navbar items -->
         <div class="hidden md:flex items-center space-x-1">
           <HeaderLink href="/" class="py-5 px-3 text-sm text-gray-600 hover:text-gray-900" data-page="">HOME</a>
-          <HeaderLink href="/about" class="py-5 px-3 text-sm text-gray-600 hover:text-gray-900" data-page="/about">ABOUT</a>
-          <HeaderLink href="/blog" class="py-5 px-3 text-sm text-gray-600 hover:text-gray-900" data-page="/blog">BLOG</a>
+          <HeaderLink href="/about" class="py-5 px-3 text-sm text-gray-600 hover:text-gray-900" data-page="about">ABOUT</a>
+          <HeaderLink href="/blog" class="py-5 px-3 text-sm text-gray-600 hover:text-gray-900" data-page="blog">BLOG</a>
         </div>
       </div>
 
