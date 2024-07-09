@@ -22,7 +22,7 @@ import { SITE_TITLE } from '../consts';
   const links = document.querySelectorAll("a[data-page]");
 
   links.forEach((link) => {
-    if (link.getAttribute("data-page") === currentPath) {
+    if (link.getAttribute("data-page") === currentPath || link.getAttribute("href") === currentPath) {
       link.classList.add("underline");
     }
   });
