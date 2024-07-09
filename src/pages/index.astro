@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import DadJoke from '../components/DadJoke.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -23,16 +24,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       But I am software engineer and love writing code. I'm really getting the itch to teach.
       This is why the blog...
 			</p>
-      <ul id="data-list"></ul>
-
-			<p>
-
+      <h3>Dad Joke</h3>
+      <p><a href="https://dadjokes.developersandbox.xyz">dadjokes.developersandbox.xyz</a>
+      <div class="border-2 bg-sky-50 p-4">
+        <DadJoke />
+      </div>
+      <p>
 			</p>
 			<p>
 
 			</p>
 		</main>
 		<Footer />
-<script src="../scripts/fetchDadJoke.js"></script>
 	</body>
 </html>
