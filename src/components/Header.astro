@@ -18,11 +18,11 @@ import { SITE_TITLE } from '../consts';
     });
   }
 
-  const currentPath = (location.pathname+location.search).replace(/\/$/, "");
+  const currentPath = window.location.pathname.split("/").pop();
   const links = document.querySelectorAll("a[data-page]");
 
   links.forEach((link) => {
-    if (link.getAttribute("data-page") === currentPath || link.getAttribute("href") === currentPath) {
+    if (link.getAttribute("data-page") === currentPath) {
       link.classList.add("underline");
     }
   });
@@ -37,10 +37,10 @@ import { SITE_TITLE } from '../consts';
       <div class="flex space-x-4">
         <div>
           <a href="/" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
-            <svg class="h-6 w-6 mr-1 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-8 w-8 mr-1 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5l3.5 3.5-1.5 1.5 5 5 1.5-1.5-3.5-3.5 1.5-1.5 5 5-1.5 1.5-3.5-3.5-1.5 1.5-5-5-1.5 1.5-3.5-3.5L12 4.5z"/>
             </svg>
-            <span class="font-bold">{SITE_TITLE}</span>
+            <h1 class="font-bold text-lg m-0">{SITE_TITLE}</h1>
           </a>
         </div>
 
